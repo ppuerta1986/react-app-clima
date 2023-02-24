@@ -51,7 +51,7 @@ function App() {
   return (
     <Fragment>
       <Header
-      titulo='Clima React App'
+      titulo='Clima React App - Modificado'
       />
       <div className="contenedor-form">
         <div className="container">
