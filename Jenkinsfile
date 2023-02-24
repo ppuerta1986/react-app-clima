@@ -1,7 +1,6 @@
 pipeline {
-     agent any
-     tools {nodejs "NODEJS-14.18.1"}
-     stages {
+    agent any
+    stages {
         stage("Build") {
             steps {
                 sh "npm install"
@@ -10,8 +9,8 @@ pipeline {
         }
         stage("Deploy") {
             steps {
-                sh "rm -rf /var/www/clima.lan"
-                sh "cp -r ${WORKSPACE}/build/ /var/www/clima.lan/"
+                sh "sudo rm -rf /var/www/clima.lan"
+                sh "sudo cp -r ${WORKSPACE}/build/ /var/www/clima.lan/"
             }
         }
     }
